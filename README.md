@@ -47,7 +47,7 @@ A utility function that converts a 4-bit binary value to a 7-segment display for
 To simulate the design:
 
 1. Clone the repository:
-   git clone https://github.com/arunbasilpaul/alarm-clock-vhdl.git
+   git clone https://github.com/arunbasilpaul/Alarm_Clock/tree/main
 2. Open the project in your preferred VHDL simulator.
 3. Run the testbench (Alarm_Clk_tb) to verify the functionality of the design.
 4. Synthesis and Implementation
