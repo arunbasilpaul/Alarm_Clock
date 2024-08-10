@@ -23,7 +23,7 @@ min_disp_ones, min_disp_tens (out): 7-segment display outputs for minutes.
 hrs_disp_ones, hrs_disp_tens (out): 7-segment display outputs for hours.
 alarm_signal (out): Signal that activates when the alarm is triggered.
 
-# Architecture: BEHAV
+Architecture: BEHAV
 The architecture contains the logic for the clock's timekeeping, alarm function, and 7-segment display control.
 
 # Key Processes:
@@ -31,7 +31,7 @@ The architecture contains the logic for the clock's timekeeping, alarm function,
 
 - CLK_DISPLAY: Converts the current time (seconds, minutes, and hours) into a format suitable for 7-segment display. This process splits the time into ones and tens digits and uses a function to convert binary values to their corresponding 7-segment display format.
 
-# Function: binary_to_bcd_display
+Function: binary_to_bcd_display
 A utility function that converts a 4-bit binary value to a 7-segment display format, which is then used to drive the 7-segment display outputs.
 
 # Getting Started
@@ -43,7 +43,7 @@ A utility function that converts a 4-bit binary value to a 7-segment display for
 To simulate the design:
 
 1. Clone the repository:
-   git clone https://github.com/your-username/alarm-clock-vhdl.git
+   git clone https://github.com/arunbasilpaul/alarm-clock-vhdl.git
 2. Open the project in your preferred VHDL simulator.
 3. Run the testbench (Alarm_Clk_tb) to verify the functionality of the design.
 4. Synthesis and Implementation
