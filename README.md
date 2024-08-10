@@ -2,13 +2,13 @@
 This project implements a digital alarm clock using VHDL (VHSIC Hardware Description Language). The clock counts seconds, minutes, and hours, and supports an alarm function that triggers based on preset values. Time and alarm values are displayed using 7-segment displays. The design is suitable for FPGA-based implementations and serves as a fundamental example of digital logic design in VHDL.
 
 # Features
-## Time Counting: The clock counts up to 60 seconds, 60 minutes, and 24 hours, displaying the time using 7-segment displays.
-## Alarm Functionality: The alarm can be set to trigger at a specific time. When the time matches the preset alarm value, an alarm signal is activated.
-## 7-Segment Display: The current time and alarm values are displayed on 7-segment displays, broken down into ones and tens for each unit (seconds, minutes, hours).
-## Reset Functionality: A reset input allows the clock and alarm to be reset to their initial state.
+- Time Counting: The clock counts up to 60 seconds, 60 minutes, and 24 hours, displaying the time using 7-segment displays.
+- Alarm Functionality: The alarm can be set to trigger at a specific time. When the time matches the preset alarm value, an alarm signal is activated.
+- 7-Segment Display: The current time and alarm values are displayed on 7-segment displays, broken down into ones and tens for each unit (seconds, minutes, hours).
+- Reset Functionality: A reset input allows the clock and alarm to be reset to their initial state.
 
 # Design Details
-## Entity: Alarm_Clk  This entity defines the top-level interface for the alarm clock system.
+- Entity: Alarm_Clk  This entity defines the top-level interface for the alarm clock system.
 
 # Ports:
 aclk (in): Clock input.
@@ -27,9 +27,9 @@ alarm_signal (out): Signal that activates when the alarm is triggered.
 The architecture contains the logic for the clock's timekeeping, alarm function, and 7-segment display control.
 
 # Key Processes:
-# CLK_FUN: Handles the time counting and alarm triggering logic. This process increments the seconds, minutes, and hours counters based on the clock input (aclk). The alarm is triggered when the current time matches the preset alarm time.
+- CLK_FUN: Handles the time counting and alarm triggering logic. This process increments the seconds, minutes, and hours counters based on the clock input (aclk). The alarm is triggered when the current time matches the preset alarm time.
 
-# CLK_DISPLAY: Converts the current time (seconds, minutes, and hours) into a format suitable for 7-segment display. This process splits the time into ones and tens digits and uses a function to convert binary values to their corresponding 7-segment display format.
+- CLK_DISPLAY: Converts the current time (seconds, minutes, and hours) into a format suitable for 7-segment display. This process splits the time into ones and tens digits and uses a function to convert binary values to their corresponding 7-segment display format.
 
 # Function: binary_to_bcd_display
 A utility function that converts a 4-bit binary value to a 7-segment display format, which is then used to drive the 7-segment display outputs.
