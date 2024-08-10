@@ -1,6 +1,10 @@
 # Overview
 This project implements a digital alarm clock using VHDL (VHSIC Hardware Description Language). The clock counts seconds, minutes, and hours, and supports an alarm function that triggers based on preset values. Time and alarm values are displayed using 7-segment displays. The design is suitable for FPGA-based implementations and serves as a fundamental example of digital logic design in VHDL.
 
+<div>
+  <img align="left" width="40%" src="https://github.com/user-attachments/assets/52b15464-286c-4dd5-adf6-c17d621a51cb)">
+</div>
+
 # Features
 - Time Counting: The clock counts up to 60 seconds, 60 minutes, and 24 hours, displaying the time using 7-segment displays.
 - Alarm Functionality: The alarm can be set to trigger at a specific time. When the time matches the preset alarm value, an alarm signal is activated.
