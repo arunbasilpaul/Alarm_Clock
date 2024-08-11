@@ -1,5 +1,5 @@
 # Overview
-This project implements a digital alarm clock using VHDL (VHSIC Hardware Description Language). The clock counts seconds, minutes, and hours, and supports an alarm function that triggers based on preset values. Time and alarm values are displayed using 7-segment displays. The design is suitable for FPGA-based implementations and serves as a fundamental example of digital logic design in VHDL.
+This hobby project implements a digital alarm clock using the Hardware favorite VHDL. The clock counts seconds, minutes, and hours, and supports an alarm function that triggers based on preset values. Time and alarm values are displayed using 7-segment displays. The design is suitable for FPGA-based implementations and serves as a fundamental example of digital logic design in VHDL.
 
 <div>
   <img align="left" width="70%" src="https://github.com/user-attachments/assets/52b15464-286c-4dd5-adf6-c17d621a51cb">
@@ -9,7 +9,7 @@ This project implements a digital alarm clock using VHDL (VHSIC Hardware Descrip
 - Time Counting: The clock counts up to 60 seconds, 60 minutes, and 24 hours, displaying the time using 7-segment displays.
 - Alarm Functionality: The alarm can be set to trigger at a specific time. When the time matches the preset alarm value, an alarm signal is activated.
 - 7-Segment Display: The current time and alarm values are displayed on 7-segment displays, broken down into ones and tens for each unit (seconds, minutes, hours).
-- Reset Functionality: A reset input allows the clock and alarm to be reset to their initial state.
+- Reset Functionality: An asynchronous reset input allows the clock and alarm to be reset to their initial state.
 
 # Design Details
 - Entity: Alarm_Clk  This entity defines the top-level interface for the alarm clock system.
