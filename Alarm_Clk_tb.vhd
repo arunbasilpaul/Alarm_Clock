@@ -9,20 +9,20 @@ architecture testbench of Alarm_Clk_tb is
 
     component Alarm_Clk
         port(
-            aclk:          in std_logic;
-            reset:         in std_logic;
-            set_alarm:     in std_logic;
-            stop_alarm:    in std_logic;
-            set_alarm_sec: in std_logic_vector (5 downto 0);
-            set_alarm_min: in std_logic_vector (5 downto 0);
-            set_alarm_hrs: in std_logic_vector (4 downto 0);
-            sec_disp_ones: out std_logic_vector (6 downto 0);
-            min_disp_ones: out std_logic_vector (6 downto 0);
-            hrs_disp_ones: out std_logic_vector (6 downto 0);
-            sec_disp_tens: out std_logic_vector (6 downto 0);
-            min_disp_tens: out std_logic_vector (6 downto 0);
-            hrs_disp_tens: out std_logic_vector (6 downto 0);
-            alarm_signal:  out std_logic
+                aclk:          in std_logic;
+                reset:         in std_logic;
+                set_alarm:     in std_logic;
+                stop_alarm:    in std_logic;
+                set_alarm_sec: in std_logic_vector (5 downto 0);
+                set_alarm_min: in std_logic_vector (5 downto 0);
+                set_alarm_hrs: in std_logic_vector (4 downto 0);
+                sec_disp_ones: out std_logic_vector (6 downto 0);
+                min_disp_ones: out std_logic_vector (6 downto 0);
+                hrs_disp_ones: out std_logic_vector (6 downto 0);
+                sec_disp_tens: out std_logic_vector (6 downto 0);
+                min_disp_tens: out std_logic_vector (6 downto 0);
+                hrs_disp_tens: out std_logic_vector (6 downto 0);
+                alarm_signal:  out std_logic
         );
     end component;
 
@@ -46,9 +46,8 @@ architecture testbench of Alarm_Clk_tb is
 
 begin
 
-    -- Instantiate the Unit Under Test (UUT)
     uut: Alarm_Clk
-        port map (
+    port map (
             aclk => aclk,
             reset => reset,
             set_alarm => set_alarm,
@@ -63,9 +62,8 @@ begin
             min_disp_tens => min_disp_tens,
             hrs_disp_tens => hrs_disp_tens,
             alarm_signal => alarm_signal
-        );
+    );
 
-    -- Clock process
     clk_process :process
     begin
         while True loop
@@ -76,10 +74,8 @@ begin
         end loop;
     end process;
 
-    -- Stimulus process
-    stim_proc: process
+    process
     begin
-        -- Initialize Inputs
         reset <= '1';
         set_alarm <= '0';
         stop_alarm <= '0';
@@ -87,25 +83,30 @@ begin
         set_alarm_min <= "000000";
         set_alarm_hrs <= "00000";
 
-        -- Wait for global reset to finish
         wait for clk_period * 2;
         reset <= '0';
 
-        -- Set an alarm
+        -- Setting an alarm
         set_alarm <= '1';
         set_alarm_sec <= "000010";  -- Alarm at 2 seconds
-        set_alarm_min <= "000000";  -- Alarm at 0 minutes
+        set_alarm_min <= "000010";  -- Alarm at 2 minutes
         set_alarm_hrs <= "00000";   -- Alarm at 0 hours
 
-        -- Wait for a few clock cycles
-        wait for clk_period * 50;
+        wait for clk_period * 50; -- Testing if the automatic alarm stop functions as intended
 
+        -- Setting another alarm
+        set_alarm <= '1';
+        set_alarm_sec <= "000010";  -- Alarm at 5 seconds
+        set_alarm_min <= "000010";  -- Alarm at 1 minutes
+        set_alarm_hrs <= "00000";   -- Alarm at 0 hours
+
+        wait for clk_period * 10;
+    
         -- Stop the alarm
         stop_alarm <= '1';
         wait for clk_period * 10;
         stop_alarm <= '0';
 
-        -- End simulation
         wait;
     end process;
 
