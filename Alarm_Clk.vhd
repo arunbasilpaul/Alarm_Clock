@@ -10,12 +10,12 @@ entity Alarm_Clk is
 		set_alarm_sec: in std_logic_vector (5 downto 0);
 		set_alarm_min: in std_logic_vector (5 downto 0);
 		set_alarm_hrs: in std_logic_vector (4 downto 0);
-		sec_disp_ones: out std_logic_vector (6 downto 0); -- To count upto 60 seconds
-		min_disp_ones: out std_logic_vector (6 downto 0); -- To count upto 60 minutes
-		hrs_disp_ones: out std_logic_vector (6 downto 0); -- To count upto 24 hours
-		sec_disp_tens: out std_logic_vector (6 downto 0); -- To count upto 60 seconds
-		min_disp_tens: out std_logic_vector (6 downto 0); -- To count upto 60 minutes
-		hrs_disp_tens: out std_logic_vector (6 downto 0); -- To count upto 24 hours
+		sec_disp_ones: out std_logic_vector (6 downto 0); -- To display the ones position of the seconds
+		min_disp_ones: out std_logic_vector (6 downto 0); -- To display the ones position of the minutes
+		hrs_disp_ones: out std_logic_vector (6 downto 0); -- To display the ones position of the hours
+		sec_disp_tens: out std_logic_vector (6 downto 0); -- To display the tens position of the seconds
+		min_disp_tens: out std_logic_vector (6 downto 0); -- To display the tens position of the minutes
+		hrs_disp_tens: out std_logic_vector (6 downto 0); -- To display the tens position of the hours
 		alarm_signal:  out std_logic
 	);
 end Alarm_Clk;
