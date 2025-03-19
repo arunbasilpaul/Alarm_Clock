@@ -1,5 +1,5 @@
 # Overview
-This hobby project implements a digital alarm clock using the Hardware favorite VHDL. The clock counts seconds, minutes, and hours, and supports an alarm function that triggers based on preset values. Time and alarm values are displayed using 7-segment displays. The design is suitable for FPGA-based implementations and serves as a fundamental example of digital logic design in VHDL.
+This hobby project implements a digital alarm clock using the Hardware favorite languages. The clock counts seconds, minutes, and hours, and supports an alarm function that triggers based on preset values. Time and alarm values are displayed using 7-segment displays. The design is suitable for FPGA-based implementations and serves as a fundamental example of digital logic design in VHDL.
 
 <div>
   <img align="left" width="70%" src="https://github.com/user-attachments/assets/52b15464-286c-4dd5-adf6-c17d621a51cb">
@@ -12,7 +12,8 @@ This hobby project implements a digital alarm clock using the Hardware favorite 
 - Reset Functionality: An asynchronous reset input allows the clock and alarm to be reset to their initial state.
 
 # Design Details
-- Entity: Alarm_Clk  This entity defines the top-level interface for the alarm clock system.
+- Entity: Alarm_Clk  This entity defines the top-level interface for the alarm clock system in VHDL.
+- Entity: Alarm_Clock  This entity defines the top-level interface for the alarm clock system in Verilog.
 
 # Ports:
 aclk (in): Clock input.
