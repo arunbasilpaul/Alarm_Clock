@@ -60,11 +60,11 @@ To simulate the design:
 4. Connect the 7-segment displays and input switches/buttons as per the design.
 
 # File Structure
-Alarm_Clk.vhd: Top-level VHDL file defining the alarm clock logic.
-Alarm_Clk_tb.vhd: VHDL Testbench for simulating the alarm clock design.
-Alarm_Clock.v: Top-level Verilog file defining the alarm clock logic.
-Alarm_Clock_tb.v: Verilog Testbench for simulating the alarm clock design.
-README.md: Project documentation.
+- Alarm_Clk.vhd: Top-level VHDL file defining the alarm clock logic.
+- Alarm_Clk_tb.vhd: VHDL Testbench for simulating the alarm clock design.
+- Alarm_Clock.v: Top-level Verilog file defining the alarm clock logic.
+- Alarm_Clock_tb.v: Verilog Testbench for simulating the alarm clock design.
+- README.md: Project documentation.
 
 # Future Enhancements
 - Multiple Alarms: Add support for setting multiple alarms.
